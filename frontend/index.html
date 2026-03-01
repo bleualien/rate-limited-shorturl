@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener & Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>
+            <h1>⚡ URL Shortener</h1>
+            <p>Efficient URL management and click tracking</p>
+        </header>
+
+        <section class="creator-card">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Paste your long URL here...">
+                <button id="shortenBtn" onclick="shortenUrl()">Shorten URL</button>
+            </div>
+            <p id="statusMsg"></p>
+        </section>
+
+        <section class="dashboard-card">
+            <div class="dashboard-header">
+                <h2>Analytics Dashboard</h2>
+                <button class="btn-secondary" onclick="loadAnalytics()">🔄 Refresh Data</button>
+            </div>
+            <div class="layout">
+                <div class="list-container">
+                    <h3>Your Links</h3>
+                    <ul id="linkList"></ul>
+                </div>
+                <div class="chart-container">
+                    <canvas id="clicksChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

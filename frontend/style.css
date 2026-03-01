@@ -1,0 +1,92 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --background: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background: var(--background); 
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+}
+
+.main-wrapper { max-width: 1000px; margin: 40px auto; }
+
+header { text-align: center; margin-bottom: 30px; }
+header h1 { margin: 0; color: var(--primary); }
+header p { color: var(--text-muted); margin-top: 5px; }
+
+.creator-card, .dashboard-card { 
+    background: var(--card-bg); 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 25px;
+}
+
+.input-group { display: flex; gap: 10px; }
+
+input { 
+    flex: 1; 
+    padding: 12px; 
+    border: 2px solid var(--border); 
+    border-radius: 8px; 
+    font-size: 16px; 
+    transition: border-color 0.2s;
+}
+input:focus { outline: none; border-color: var(--primary); }
+
+button { 
+    padding: 12px 24px; 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: 600;
+    cursor: pointer; 
+    transition: background 0.2s;
+}
+button:hover { background: var(--primary-dark); }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+
+.btn-secondary {
+    background: #f8fafc;
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: #e2e8f0; }
+
+#statusMsg { font-size: 14px; margin-top: 10px; min-height: 20px; }
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.dashboard-header h2 { margin: 0; }
+
+.layout { display: flex; gap: 30px; }
+
+.list-container { flex: 1; border-right: 1px solid var(--border); padding-right: 20px; }
+.list-container h3 { margin-top: 0; color: var(--text-muted); }
+
+#linkList { list-style: none; padding: 0; max-height: 400px; overflow-y: auto; }
+#linkList li { 
+    padding: 12px; 
+    background: #f8fafc; 
+    margin-bottom: 8px; 
+    cursor: pointer; 
+    border-radius: 6px; 
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+#linkList li:hover { border-color: var(--primary); background: #eff6ff; }
+
+.chart-container { flex: 2; min-height: 300px; }
